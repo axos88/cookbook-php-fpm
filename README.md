@@ -57,13 +57,13 @@ override_attributes "php-fpm" => {
 ## Create PHP-FPM pool named 'www' with default settings:
 
 ```ruby
-php_fpm_pool "www"
+php_fpm_fpm_pool "www"
 ```
 
 ## Create PHP-FPM pool named 'www' with custom settings:
 
 ```ruby
-php_fpm_pool "www" do
+php_fpm_fpm_pool "www" do
   cookbook "another-cookbook" # get template from another cookbook
   process_manager "dynamic"
   max_requests 5000
@@ -74,7 +74,7 @@ end
 ## Delete PHP-FPM pool named 'www':
 
 ```ruby
-php_fpm_pool "www" do
+php_fpm_fpm_pool "www" do
   enable false
 end
 ```

@@ -34,7 +34,7 @@ if node['php-fpm']['pools']
     else
       pool_name = pool[:name]
     end
-    php_fpm_pool pool_name do
+    php_fpm_fpm_pool pool_name do
       pool.each do |k, v|
         params[k.to_sym] = v
       end

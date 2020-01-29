@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: php-fpm
-# Definition:: php_fpm_pool
+# Definition:: php_fpm_fpm_pool
 #
 # Copyright 2008-2017, Chef Software, Inc.
 #
@@ -17,7 +17,7 @@
 # limitations under the License.
 #
 
-define :php_fpm_pool, template: 'pool.conf.erb', enable: true do
+define :php_fpm_fpm_pool, template: 'pool.conf.erb', enable: true do
   pool_name = params[:name]
 
   conf_file = "#{node['php-fpm']['pool_conf_dir']}/#{pool_name}.conf"
